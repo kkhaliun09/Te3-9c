@@ -1,0 +1,32 @@
+GraphicsWindow.title="Mngolian Clock"
+GraphicsWindow.BackgroundColor="Black"
+GraphicsWindow.BrushColor="Green"
+GraphicsWindow.FontName="Courier New"
+
+Timer.Interval=1000
+timer.Tick=OnTick
+sub OnTick
+    GraphicsWindow.clear()
+    GraphicsWindow.FontSize=40
+    mongolianHour = Clock.Hour + 8
+    if mongolianHour = Clock.Hour +8 then
+        if mongolianHour > 24 then 
+            mongolianHour = mongolianHour -24
+        endif
+        EndIf
+        if clock.minute > 9 then 
+            if clock.second > 9 then 
+                GraphicsWindow.DrawText(0, 0, mongolianHour + ":" + clock.minute +":" + clock.second)
+            else
+                GraphicsWindow.DrawText(0, 0, mongolianHour + ":" + clock.minute +":0" + clock.second)
+            endif
+        else
+            if clock.second > 9 then
+                GraphicsWindow.DrawText(0, 0, mongolianHour + ":0" + clock.minute +":" + clock.second)
+            else
+                GraphicsWindow.DrawText(0, 0, mongolianHour + ":0" + clock.minute +":0" + clock.second)
+                EndIf
+            endif
+                GraphicsWindow.FontSize=20
+                GraphicsWindow.DrawText(0, 50, clock.weekday + "" + clock.date)
+            endsub
