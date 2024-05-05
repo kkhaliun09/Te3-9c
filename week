@@ -1,0 +1,8 @@
+week[0]="davaa"
+week[1]="mygmar"
+week[2]="lhagwa"
+week[3]="purew"
+week[4]="baasan"
+week[5]="bymba"
+week[6]="nym"
+TextWindow.WriteLine(week)
