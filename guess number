@@ -15,7 +15,7 @@ TextWindow.Write("What's my number?")
 number=TextWindow.ReadNumber()
 if number = number2 then 
     TextWindow.WriteLine("You won")
-    TextWindow.WriteLine("Wouls you like play again y/n")
+    TextWindow.WriteLine("Would you like play again y/n")
    if playagain="y" then
 
 GoTo start
