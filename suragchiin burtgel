@@ -1,0 +1,6 @@
+J=Controls.AddButton("",50, 50)
+Controls.SetSize(J,400,400)
+k=Controls.AddButton("Сурагчийн нэр" , 60 , 60)
+Controls.SetSize(k, 80, 60)
+v=Controls.AddButton("",160,60)
+Controls.SetSize(v, 250, 60)
