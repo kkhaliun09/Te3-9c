@@ -59,4 +59,21 @@ def hx(c):
     )
 
 
-def 
+def mix(a, b, k):
+    return tuple(p + (q - p) * k for p, q in zip(a, b))
+
+
+def dim(c, k):
+    return tuple(v * k for v in c)
+
+
+POLY = [heart(2 * m.pi * i / 720) for i in range(720)]
+EDGE = list(zip(POLY, POLY[1 :] + POLY[:1]))
+YMAX = max(p[1] for p in POLY)
+YMIN = min(p[1] for p in POLY)
+CY = (YMAX + YMIN) / 2
+
+
+def spans(y):
+    XS =[]
+    for (x1, y1), (x2, y2) in EDGES:
