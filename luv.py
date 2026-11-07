@@ -77,3 +77,7 @@ CY = (YMAX + YMIN) / 2
 def spans(y):
     XS =[]
     for (x1, y1), (x2, y2) in EDGES:
+        if (y1 <= y < y2) or (y2 <= y < y1):
+            xs.append(x1 + (y - y1) * (x2 - x1) / (y2 - y1))
+    XS.sort()
+    return list(zip(xs[0: :2], xs[1: :2]))
